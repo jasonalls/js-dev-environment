@@ -57,3 +57,13 @@ TO WATCH FILES AND LINT THEM
 To watch files and lint them, open a terminal window and type:
 
 npm run lint:watch
+
+----------------------
+CONTINUOUS INTEGRATION
+----------------------
+
+The development environment has been configured to work with a Linux CI server called Travis CI, and a Windows CI server called Appveyor.
+
+The configuration file for Travis CI is .travis.yml.
+
+The configuration file for Appveyr CI is appveyor.yml.
