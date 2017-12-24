@@ -13,7 +13,8 @@
     "share": "npm-run-all --parallel security-check open:src localtunnel",
     "test": "mocha --reporter progress buildScripts/testSetup.js \"src/**/*.test.js\"",
     "test:watch": "npm run test -- --watch",
-    "test:lint:watch": "npm-run-all --parallel test:watch lint:watch"
+    "test:lint:watch": "npm-run-all --parallel test:watch lint:watch",
+    "test:security-check": "npm-run-all --parallel test security-check"
   },
   "author": "Jason Alls",
   "license": "MIT",
