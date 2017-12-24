@@ -67,3 +67,15 @@ The development environment has been configured to work with a Linux CI server c
 The configuration file for Travis CI is .travis.yml.
 
 The configuration file for Appveyr CI is appveyor.yml.
+
+At the moment, I am unable to get TeamCity to pick up the build file automatically. So I have had to add a build step manually. The build step settings are:
+
+- Runner Type                       : Command Line
+- Step Name                         : tests with security check.
+- Execute Step                      : If all previous steps finished successfully.
+- Working Direcory                  : <LocalDrive>:\<LocalRepository>
+- Run                               : Custom Script
+- Custom Script                     : <LocalDrive>:\<LocalRepository>
+                                      npm run test:security-check -s
+- Format STDERR Output As           : Warning
+- Run Step Within Docker Container  :
