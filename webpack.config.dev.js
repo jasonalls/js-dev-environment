@@ -1,4 +1,6 @@
 import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
   devServer: {
@@ -15,11 +17,25 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [],
+  plugins: [
+    // Generate an external css file with a hash in the filename.
+    new ExtractTextPlugin({
+      allChunks: true,
+      filename: 'style.css'
+    }),
+    // Build a HTML file that includes a reference to bundled JS.
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    })
+  ],
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader']},
-      {test: /\.css$/, loaders: ['style-loader','css-loader']}
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap")
+    }
     ]
   }
 }
