@@ -22,13 +22,23 @@ npm install
 
 This will install all the required dependencies and development dependencies.
 
+--------------------------------------------------
+SWITCHING BETWEEN DEVELOPMENT AND PRODUCTION BUILD
+--------------------------------------------------
+
+Open the file 'buildScripts/build.js', and modify the following line:
+
+-- For development build: process.env.NODE_ENV = 'development';
+
+-- For production build: process.env.NODE_ENV = 'production';
+
 ---------------------------------
 TO RUN THE PROGRAM IN THE BROWSER
 ---------------------------------
 
 Open up a terminal window and type:
 
-npm start
+npm start -s
 
 The default URL is:
 

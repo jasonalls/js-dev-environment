@@ -3,7 +3,7 @@ import webpack from 'webpack';
 import webpackConfig from '../webpack.config.prod';
 import chalk from 'chalk';
 
-process.env.NODE_ENV = 'production';
+process.env.NODE_ENV = 'development';
 
 console.log(chalk.blue('Generating minified bundle for production. This will take a moment...'));
 
