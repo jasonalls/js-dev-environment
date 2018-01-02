@@ -62,7 +62,10 @@ export default {
         minifyCSS: true,
         minifyURLs: true
       },
-      inject: true
+      inject: true,
+      // Properties you define here are available in index.html
+      // using htmlWebPackPlugin.options.varName.
+      //trackJSToken: '<YOUR_TRACKJS_TOKEN_HERE>'
     }),
     // Minify JS.
     new webpack.optimize.UglifyJsPlugin({
@@ -89,28 +92,3 @@ export default {
   },
   watch: true
 }
-
-/*{,
-      {
-        test: /\.(s*)css$/,
-        use: extractSass.extract({
-            use: [
-              {
-                test: /\.(s*)css$/,
-                includePaths: ['./src/css/*.scss', './src/css/*.css'],
-                loader: extractSass.extract('style', 'css-loader!postcss!sass-loader'),
-              }
-            ],
-            // use style-loader in development
-            fallback: "style-loader"
-        })
-      }
-                loader: "css-loader", options: {
-                  sourceMap: true,
-                  includePaths: ["./src/index.css"]
-                }
-            }, {
-                loader: "sass-loader", options: {
-                  sourceMap: true,
-                  includePaths: ["./src/index.css", "./src/styles/themeColors.scss", "./src/styles/appStyles.scss"]
-                }*/

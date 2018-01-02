@@ -89,3 +89,11 @@ At the moment, I am unable to get TeamCity to pick up the build file automatical
                                       npm run test:security-check -s
 - Format STDERR Output As           : Warning
 - Run Step Within Docker Container  :
+
+---------------------
+LOGGING USING TRACKJS
+---------------------
+
+To enable online logging of your application, uncomment the following line in the file 'webpack.config.prod.js', and replace '<YOUR_TRACKJS_TOKEN_HERE>' with your TrackJS token:
+
+//trackJSToken: '<YOUR_TRACKJS_TOKEN_HERE>'
