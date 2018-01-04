@@ -26,7 +26,8 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   resolve: {
-      modules: [ 'node_modules', './src' ]
+      modules: [ 'node_modules', './src' ],
+      alias: {vue$: 'vue/dist/vue.esm.js'}
   },
   plugins: [
     extractSass,
@@ -70,7 +71,8 @@ export default {
     // Minify JS.
     new webpack.optimize.UglifyJsPlugin({
       sourceMapFilename: '[name].[chunkhash].js.map',
-      sourceMap: true
+      sourceMap: true,
+      mangle: false
     })
   ],
   module: {

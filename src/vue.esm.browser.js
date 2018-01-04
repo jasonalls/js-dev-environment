@@ -5,6 +5,8 @@
  */
 /*  */
 
+/* eslint-disable */
+
 const emptyObject = Object.freeze({});
 
 // these helpers produces better vm code in JS engines due to their

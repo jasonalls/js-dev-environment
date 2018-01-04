@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Vue from './vue.esm.browser';
 
 const app = new Vue({
