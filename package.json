@@ -33,13 +33,15 @@
     "foundation-sites": "^6.4.4-rc1",
     "fs": "^0.0.1-security",
     "gulp-delete-file": "^1.0.2",
+    "jquery": "^3.2.1",
     "motion-ui": "^1.2.3",
     "postcss": "^6.0.14",
     "postcss-import": "^11.0.0",
     "raven": "^2.3.0",
     "stack-trace": "0.0.10",
     "timed-out": "^4.0.1",
-    "uuid": "^3.1.0"
+    "uuid": "^3.1.0",
+    "vue": "^2.5.13"
   },
   "devDependencies": {
     "angular": "^1.6.8",

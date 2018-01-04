@@ -26,7 +26,8 @@ export default {
     filename: '[name].[chunkhash].js'
   },
   resolve: {
-      modules: [ 'node_modules', './src' ]
+      modules: [ 'node_modules', './src' ],
+      alias: {vue$: 'vue/dist/vue.esm.js'}
   },
   plugins: [
     extractSass,

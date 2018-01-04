@@ -11,6 +11,10 @@ REQUIREMENTS
 [2] Git
 [3] Visual Studio Code
 [4] Editorconfig Plug-in For Visual Studio Code
+[5] Python 2.7 is installed at C:\python27.
+[6] On windows use an elevated command prompt and type:
+
+    - npm install --global --production windows-build-tools
 
 ---------------------------------------------------
 TO INITIALISE THE PROJECT AFTER CLONING FROM GITHUB
