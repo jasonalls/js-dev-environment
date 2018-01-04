@@ -68,7 +68,8 @@ export default {
     // Minify JS.
     new webpack.optimize.UglifyJsPlugin({
       sourceMapFilename: '[name].[chunkhash].js.map',
-      sourceMap: true
+      sourceMap: true,
+      mangle: false
     })
   ],
   module: {

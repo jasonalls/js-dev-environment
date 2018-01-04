@@ -1,5 +1,6 @@
 import './css/main.scss';
 import './view-examples';
+import './graphql-example';
 
 import {getUsers, deleteUser} from './api/userApi';
 
