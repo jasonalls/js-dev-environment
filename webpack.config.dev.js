@@ -29,6 +29,10 @@ export default {
       modules: [ 'node_modules', './src' ],
       alias: {vue$: 'vue/dist/vue.esm.js'}
   },
+  externals: {
+    "vue": "Vue",
+    "createjs": "createjs"
+  },
   plugins: [
     extractSass,
     // Generate an external css file with a hash in the filename.

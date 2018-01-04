@@ -2,6 +2,7 @@ import './css/main.scss';
 import './view-examples';
 import './graphql-example';
 import './ramda-examples';
+import './easlejs-examples';
 
 import {getUsers, deleteUser} from './api/userApi';
 
